@@ -25,5 +25,10 @@ public class InventoryPage extends BasePage {
         cart.click();
         return new CartPage(driver);
     }
+    public void addFirstThreeProducts(){
+        for (int i = 0; i < 3; i++) {
+            products.get(i).findElement(By.tagName("button")).click();
+        }
+    }
 
 }
